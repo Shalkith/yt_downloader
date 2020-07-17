@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% set active_page = "index" %}
+{% block body %}
+
+
+
+
+<div>
+ <h3>YTDL</h3>
+
+
+
+ <p class="lead">
+{% if message is defined %}
+{{message}}
+{% endif %}
+
+
+<form action="/processcsv" Method="POST">
+  <input type="file" id="file" name="file">
+  <input type="submit">
+</form>
+
+
+</div>
+{% endblock %}
